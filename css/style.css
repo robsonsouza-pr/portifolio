@@ -42,7 +42,17 @@ header, footer, section, article, div {
 	display:inline-block;
 	text-align: end;
 	font-weight: 300;
-	margin: 140px 0px 0px 0px;
+	margin: 100px 0px 0px 0px;
+	color: #2d3c49;
+}
+
+#subtitle{	
+	color: #2d3c49;
+	text-align: end;
+}
+
+.main_img{
+	text-align:center;
 }
 
 .works {
@@ -61,12 +71,12 @@ header, footer, section, article, div {
 
 section h3 {
 	font-size:3em;
-	color: #212121;
+	color: #2d3c49;
 	margin: 0;
 	padding: 0;
 }
 
 section a{
 	text-decoration: none;
-	color: black;
+	color: #7d97ad;
 }
