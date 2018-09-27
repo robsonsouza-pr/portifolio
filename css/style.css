@@ -1,4 +1,4 @@
-body, html {
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -6,7 +6,6 @@ body, html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  /*font-size: 12px;*/
   color: #424242;
 }
 
@@ -19,8 +18,9 @@ header, footer, section, article, div {
 }
 
 .header {
+	order:0;
 	border-bottom: 5px solid black;
-	height: 205px;
+	height: auto;
 	width: 100%;
 }
 
@@ -30,19 +30,22 @@ header, footer, section, article, div {
 }
 
 .title_img{
-	width:200px;
-	height:200px;
+	width:100%;
+	max-width:200px;
+	/*height:200px*/
+	height: auto;
 	vertical-align: text-bottom;
 }
 
 .content_left {
+	order:1;
 	float: left;
 	text-align: start;
-	/*margin: 100px 0px 0px 0px;*/
 	width: 50%;
 }
 
 .content_right {
+	order:2;
 	float: right;
 	display:inline-block;
 	text-align: end;
@@ -52,30 +55,37 @@ header, footer, section, article, div {
 	width: 50%;
 }
 
-#title{	
+#title {	
 	color: #2d3c49;
 	text-align: end;
 	font-size:3em;;
 }
 
-#subtitle{	
+#subtitle {	
 	color: #2d3c49;
 	text-align: end;
 	font-size:1.5em;
 }
 
+.main {
+	order:3;
+}
+
 .main_img{
+	width:100%;
+	height:auto;
 	text-align:center;
 }
 
 .works {
+	order:4;
 	text-align: center;
-	margin-bottom:10px;;
+	margin-bottom:10px;
 }
 
 .works_title {
 	font-size:3em;
-	text-align: start;
+	text-align: left;
 	color: #7d97ad;
 }
 
@@ -85,8 +95,9 @@ header, footer, section, article, div {
 }
 
 .works_item_img {
-	width: 200px;
-	height: 200px;
+	width: 100%;
+	max-width: 200px;
+	height: auto;
 }
 
 section h3 {
@@ -96,7 +107,26 @@ section h3 {
 	padding: 0;
 }
 
-section a{
+a{
 	text-decoration: none;
 	color: #7d97ad;
+}
+
+.conteiner {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+}
+
+footer {
+  order: 5;
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
 }
